@@ -1,0 +1,691 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	background: #000;
+}
+
+/*ANIMACJE*/
+@keyframes fadeInLeft
+{
+	0%
+	{
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeOutLeft
+{
+	0%
+	{
+		opacity: 1;
+	}
+	100%
+	{
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+@keyframes fadeInRight
+{
+	0%
+	{
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes logoAnimationToRightSide
+{
+	to{transform: rotateY(180deg)}
+}
+
+@keyframes logoAnimationToLeftSide
+{
+	from{transform: rotateY(-180deg)}
+}
+/*KONIEC ANIMACJE*/
+/*----------------------------------------------------------------*/
+
+/*LOGO I TABELA Z DANYMI PERSONALNYMI*/
+header
+{
+	background: #000;
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+#krisvent
+{
+	width: 50%;
+	height: auto;
+}
+
+#logo
+{
+	float: left;
+	margin-top: 3%;
+	width: 16%;
+	height: auto;
+}
+
+#logo-desktop
+{
+    display: none;
+}
+
+#krisvent
+{
+	margin-top: 2%;
+}
+
+#personal_data
+{
+	color: grey;
+	position: absolute;
+	right: 2%;
+	top: 20%;
+	display: none;
+}
+
+#personal_data table
+{
+	border-collapse: collapse;
+}
+
+#personal_data table td a
+{
+	color: grey;
+	text-decoration: none;
+}
+
+#personal_data tr:not(#personal_data tr:last-child)
+{
+	border-bottom: 0.1px dotted grey;
+}
+
+#personal_data td:first-child
+{
+	border-right: 0.1px dotted grey;
+	padding-right: 5px;
+}
+
+#personal_data td:last-child
+{
+	padding: 5px;
+}
+
+#personal_data td
+{
+	line-height: 150%;
+}
+
+#menu-tip
+{
+	color: grey;
+	font-family: Arial;
+	font-size: 80%;
+	margin-left: 2%;
+	opacity: 0;
+}
+/*KONIEC LOGO I TABELA Z DANYMI PERSONALNYMI*/
+/*----------------------------------------------------------------*/
+
+/*MENU MOBILNE*/
+#menu-bar-mobile
+{
+	border-bottom-right-radius: 10px;
+	background: rgba(0,0,0,0.8);
+	width: 30%;
+	height: auto;
+	position: absolute;
+	display: none;
+	z-index: 1;
+    border-right: 2px solid #333333;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    box-shadow: 3px 3px 20px 0px black;
+}
+
+#menu-bar-mobile img
+{
+	border-radius: 5px;
+	width: 60%;
+}
+
+.home
+{
+	margin-top: 10%;
+}
+
+.offer, .about-us
+{
+	margin-top: 10%;
+}
+
+.offer
+{
+	margin-bottom: 10%;
+}
+
+#about-us-light:hover, #offer-light:hover, #home-light:hover
+{
+	opacity: 0.1;
+}
+
+#about-us-light, #offer-light, #home-light
+{
+	position: absolute;
+}
+
+#menu-bar-mobile div img
+{
+	margin-left: 12%;
+	width: 70%;
+	border-radius: 10%;
+}
+/*KONIEC MENU MOBILNE*/
+/*----------------------------------------------------------------*/
+
+/*MENU DESKTOPOWE*/
+#menu-bar-desktop
+{
+	width: 100%;
+	height: auto;
+	background-color: #020102;
+	display: none;
+	padding-left: 1%;
+	padding-bottom: 1%;
+}
+
+#menu-bar-desktop img
+{
+	width: 100%;
+}
+
+.about-us-desktop
+{
+	display: inline-flex;
+}
+
+.about-us-desktop, .offer-desktop, .home-desktop
+{
+	width: 6%;
+}
+	
+#about-us-light-desktop, #offer-light-desktop, #home-light-desktop
+{
+	position: absolute;
+}
+
+#about-us-light-desktop:hover, #offer-light-desktop:hover, #home-light-desktop:hover
+{
+	opacity: 0.1;
+}
+
+.about-us-desktop, .offer-desktop, .home-desktop
+{
+	position: relative;
+	display: inline-block;
+}
+
+.about-us-desktop img
+{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.home-desktop img
+{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*KONIEC MENU DESKTOPOWE*/
+/*----------------------------------------------------------------*/
+
+/*SECTION HOME-PAGE*/
+#home-page
+{
+	min-height: 63vh;	
+}
+
+#home-page p
+{
+	padding-top: 20%;
+	font-size: 130%;
+	line-height: 170%;
+}
+/*KOENIC SECTION HOME-PAGE*/
+/*----------------------------------------------------------------*/
+
+/*SECTION O NAS*/
+#main-content
+{
+	background: url("../img/siatka-top.jpg");
+	background-size: 100%;
+	border-top: 2px solid #333333;
+	border-bottom: 2px solid #333333;
+    padding-bottom: 10%;
+}
+
+#about-us-webside
+{
+	display: none;
+}
+
+#img-container
+{
+	display: block;
+}
+
+#img-container img
+{
+	max-width: 40%;
+	float: left;
+	width: 30%;
+	border: 3px solid #333333;
+    box-shadow: 3px 3px 20px 0px black;
+	margin-right: 2%;
+	margin-left: 1%;
+	margin-top: 1%;
+    border-radius: 5px;
+}
+
+p
+{
+	font-size: 150%;
+	color: #97276A;
+	margin: 1%;
+}
+/*KONIEC SECTION O NAS*/
+/*----------------------------------------------------------------*/
+
+/*SECTION OFERTA*/
+#offer-webside
+{
+    display: none;
+}
+
+#offer-webside table
+{
+    margin: 2%;
+}
+
+#offer-webside tr
+{
+    color: #97276A;
+}
+
+#offer-webside tr:nth-child(2n+1)
+{
+    color: rgb(0,147,221);
+}
+
+#offer-webside tr:nth-child(2n+1) td
+{
+    padding: 0.5%;
+    font-size: 120%;
+    border-top: 2px dotted #404040;
+}
+
+#offer-webside td
+{
+    font-size: 120%;
+    padding-bottom: 4%;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+/*KONIEC SECTION OFERTA*/
+/*----------------------------------------------------------------*/
+
+/*FOOTER*/
+footer
+{
+    background: url("../img/siatka-top.jpg");
+    width: 100%;
+    min-height: 15vh;
+	color: rgb(0,147,221);
+	text-align: center;
+	padding-top: 10%;
+	font-size: 75%;
+}
+/* KONIEC FOOTER*/
+/*----------------------------------------------------------------*/
+
+/*MEDIA QUEIRES DLA LOGO, TABELA Z DANYMI PERSONALNYMI I MENU*/
+@media only screen and (min-width: 450px)
+{
+	#krisvent
+	{
+		width: 35%;
+	}
+
+	#logo
+	{
+		width: 10%;
+	}
+}
+
+@media only screen and (min-width: 450px) and (orientation: landscape)
+{
+	#logo
+	{
+		width: 9%;
+	}
+}
+
+@media only screen and (min-width: 500px)
+{
+	#personal_data
+	{
+		display: block;
+	}
+	
+	#menu-bar-mobile
+	{
+		width: 21%;
+	}
+}
+
+@media only screen and (max-width: 500px)
+{
+	header
+	{
+		padding-bottom: 2%;
+	}
+}
+
+@media only screen and (min-width: 768px)
+{
+	#krisvent
+	{
+		width: 30%;
+	}
+
+	#logo
+	{
+		width: 9%;
+	}
+	
+	#menu-bar-mobile
+	{
+		width: 20%;
+	}
+}
+
+@media only screen and (min-width: 800px) 
+{
+	#menu-bar-mobile
+	{
+		width: 17%;
+	}
+}
+
+@media only screen and (min-width: 800px) and (orientation: landscape)
+{
+	#krisvent
+	{
+		width: 25%;
+	}
+
+	#logo
+	{
+		width: 7%;
+	}
+}
+
+@media only screen and (min-width: 928px)
+{
+	#krisvent
+	{
+		width: 25%;
+	}
+
+	#logo
+	{
+		width: 7%;
+	}
+	
+	#menu-bar-mobile
+	{
+		width: 15%;
+	}
+}
+
+@media only screen and (min-width: 1190px)
+{
+	#krisvent
+	{
+		width: 18%;
+	}
+
+	#logo
+	{
+		width: 5%;
+	}
+}
+
+@media only screen and (min-width: 1280px)
+{
+	#krisvent
+	{
+		width: 12%;
+		margin-top: 1%;
+	}
+
+	#logo
+	{
+		display: none;
+	}
+	
+	#personal_data
+	{
+		top: 50%;
+		font-size: 125%;
+	}
+	
+	#logo-desktop
+	{
+		display: inline-block;
+		width: 4%;
+		margin-top: 1%;
+	}
+	
+	#menu-bar-mobile
+	{
+		display: none;
+		z-index: -1;
+	}
+	
+	#menu-tip, #about-us-light, #offer-light, #home-light, #about-us-dark, #offer-dark, #home-dark
+	{
+		display: none;
+	}
+	
+	#menu-bar-desktop
+	{
+		display: flex;
+	}
+}
+/* KONIEC MEDIA QUEIRES DLA LOGO I TABELA Z DANYMI PERSONALNYMI*/
+/*----------------------------------------------------------------*/
+
+/*MEDIA QUEIRES DLA SECTION*/
+@media only screen and (min-width: 500px) and (orientation: landscape)
+{
+	footer
+	{
+		padding-top: 5%;
+	}
+}
+@media only screen and (max-width: 600px)
+{
+	#img-container img
+    {
+        width: 100%;
+
+    }
+    
+    p
+    {
+        font-size: 120%;
+        color: #97276A;
+        margin: 2%;
+    }
+}
+
+@media only screen and (min-width: 600px)
+{
+	#home-page p
+	{
+		padding-top: 20%;
+		font-size: 150%;
+		line-height: 170%;
+	}
+	
+	#img-container img
+    {
+        width: 30%;
+    }
+    
+    p
+    {
+        font-size: 140%;
+        color: #97276A;
+        margin: 2%;
+    }
+	
+	#offer-webside td
+	{
+		font-size: 140%;
+	}
+}
+
+@media only screen and (min-width: 768px)
+{
+	#img-container img
+    {
+        width: 30%;
+    }
+    
+    p
+    {
+        font-size: 150%;
+        color: #97276A;
+        margin: 2%;
+    }
+	
+	#offer-webside td
+	{
+		font-size: 150%;
+	}
+	
+	#home-page p
+	{
+		padding-top: 20%;
+		font-size: 160%;
+		line-height: 170%;
+	}
+}
+
+@media only screen and (min-width: 992px)
+{
+	#img-container img
+    {
+        width: 25%;
+    }
+    
+    p
+    {
+        font-size: 200%;
+        color: #97276A;
+        margin: 2%;
+    }
+	
+	#offer-webside td
+	{
+		font-size: 200%;
+	}
+    
+    #offer-webside tr:nth-child(2n+1) td
+	{
+		font-size: 150%;
+		
+	}
+	
+	#home-page p
+	{
+		padding-top: 20%;
+		font-size: 170%;
+		line-height: 170%;
+	}
+}
+
+@media only screen and (min-width: 1200px)
+{
+	#home-page p
+	{
+		padding-top: 10%;
+		font-size: 180%;
+		line-height: 170%;
+		width: 60%;
+		margin: 0 auto;
+	}
+	
+	#img-container img
+    {
+        width: 15%;
+    }
+	
+	#about-us-webside
+	{
+		min-height: 42vh
+	}
+	#about-us-webside p
+	{
+		padding-top: 3%;
+	}
+    
+    p
+    {
+        font-size: 200%;
+        color: #97276A;
+        margin: 1%;
+    }
+	
+	#offer-webside td
+	{
+		font-size: 200%;
+	}
+    
+    #offer-webside tr:nth-child(2n+1) td
+	{
+		font-size: 150%;
+		
+	}
+	
+	footer
+	{
+		padding-top: 3%;
+	}
+}
